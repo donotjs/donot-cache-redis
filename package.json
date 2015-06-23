@@ -1,5 +1,5 @@
 {
-  "name": "smart-static-fs-cache",
+  "name": "smart-static-redis-cache",
   "version": "0.0.1",
   "description": "Redis cache engine for smart-static.",
   "author": "Kristian Trenskow <trenskow@me.com>",
