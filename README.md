@@ -23,7 +23,7 @@ Usage:
     var redisCache = require('smart-static-redis-cache');
 
     var server = http.createServer(smartStatic(serveDir, {
-        cache: redisCache()
+        cache: redisCache(6379, '127.0.0.1')
     ));
 
     server.listen(8000);
