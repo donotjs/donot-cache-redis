@@ -2,7 +2,7 @@ var redis = require('redis');
 
 exports = module.exports = function() {
 
-  var client = redis.createClient(arguments);
+  var client = redis.createClient.apply(this, arguments);
 
   return {
     get: function(file, cb) {
