@@ -1,9 +1,9 @@
 smart-static-redis-cache
 =====================
 
-[![Build Status](https://travis-ci.org/trenskow/smart-static-redis-cache.svg?branch=master)](https://travis-ci.org/trenskow/smart-static-redis-cache)
+[![Build Status](https://travis-ci.org/trenskow/donot-redis-cache.svg?branch=master)](https://travis-ci.org/trenskow/donot-redis-cache)
 
-File system cache engine for [smart-static](https://github.com/trenskow/smart-static.js).
+Redis cache engine for [donot](https://github.com/trenskow/donot).
 
 # How to Use
 
@@ -16,19 +16,19 @@ Usage:
 `port` defaults to 6379 and host to `127.0.0.1`.
 
 ## Example
-
+a
     var http = require('http');
 
-    var smartStatic = require('smart-static');
-    var redisCache = require('smart-static-redis-cache');
+    var donot = require('donot');
+    var redisCache = require('donot-redis-cache');
 
-    var server = http.createServer(smartStatic(serveDir, {
+    var server = http.createServer(donot(serveDir, {
         cache: redisCache(6379, '127.0.0.1')
     ));
 
     server.listen(8000);
 
-> Remark. It does not make sense to use caching without template engine plug-ins - as only template renderings are cached. See [smart-static](https://github.com/trenskow/smart-static) for available template plug-ins.
+> Remark. It does not make sense to use caching without template engine plug-ins - as only template renderings are cached. See [donot](https://github.com/trenskow/donot) for available template plug-ins.
 
 # License
 

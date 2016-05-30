@@ -1,3 +1,7 @@
+/*jshint expr: true*/
+
+'use strict';
+
 var expect = require('chai').expect;
 var redis = require('../');
 
@@ -22,13 +26,13 @@ describe('cache', function() {
     cache.set('test/', { modified: new Date() }, function(err) {
       expect(err).to.be.null;
       done();
-    })
+    });
   });
 
   it ('get data without error and correct format', function(done) {
     cache.get('test/', function(err, data) {
       expect(err).to.be.null;
-      expect(data).to.be.an('object')
+      expect(data).to.be.an('object');
       expect(function() {
         return new Date(data.modified);
       }).to.not.throw(Error);

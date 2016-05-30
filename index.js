@@ -10,8 +10,8 @@ exports = module.exports = function() {
         var data;
         try {
           data = JSON.parse(json);
-        } catch (err) {
-          return cb(err);
+        } catch (e) {
+          return cb(e);
         }
         cb(null, data);
       });
@@ -28,6 +28,6 @@ exports = module.exports = function() {
       });
     },
     client: client
-  }
+  };
 
 };
