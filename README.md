@@ -1,9 +1,9 @@
 donot-cache-redis
 =================
 
-[![Build Status](https://travis-ci.org/trenskow/donot-cache-redis.svg?branch=master)](https://travis-ci.org/trenskow/donot-cache-redis)
+[![Build Status](https://travis-ci.org/donotjsdonot-cache-redis.svg?branch=master)](https://travis-ci.org/donotjsdonot-cache-redis)
 
-Redis cache engine for [donot](https://github.com/trenskow/donot).
+Redis cache engine for [donot](https://github.com/donotjsdonot).
 
 # How to Use
 
@@ -27,7 +27,7 @@ Usage:
 
     server.listen(8000);
 
-> Remark. It does not make sense to use caching without template engine plug-ins - as only template renderings are cached. See [donot](https://github.com/trenskow/donot) for available template plug-ins.
+> Remark. It does not make sense to use caching without template engine plug-ins - as only template renderings are cached. See [donot](https://github.com/donotjsdonot) for available template plug-ins.
 
 # License
 
