@@ -6,7 +6,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/donotjsdonot-cache-redis"
+    "url": "https://github.com/donotjs/donot-cache-redis"
   },
   "dependencies": {
     "redis": "^0.12.1"
