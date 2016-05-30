@@ -1,5 +1,5 @@
-smart-static-redis-cache
-=====================
+donot-redis-cache
+=================
 
 [![Build Status](https://travis-ci.org/trenskow/donot-redis-cache.svg?branch=master)](https://travis-ci.org/trenskow/donot-redis-cache)
 
