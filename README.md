@@ -21,7 +21,7 @@ Usage:
         donot = require('donot'),
         redisCache = require('donot-cache-redis');
 
-    var server = http.createServer(donot({
+    var server = http.createServer(donot(__dirname + '/public', {
         cache: redisCache(6379, '127.0.0.1')
     }));
 
