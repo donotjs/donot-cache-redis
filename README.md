@@ -16,15 +16,14 @@ Usage:
 `port` defaults to 6379 and host to `127.0.0.1`.
 
 ## Example
-a
-    var http = require('http');
 
-    var donot = require('donot');
-    var redisCache = require('donot-cache-redis');
+    var http = require('http'),
+        donot = require('donot'),
+        redisCache = require('donot-cache-redis');
 
-    var server = http.createServer(donot('/', {
+    var server = http.createServer(donot({
         cache: redisCache(6379, '127.0.0.1')
-    ));
+    }));
 
     server.listen(8000);
 
