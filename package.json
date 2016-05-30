@@ -1,12 +1,12 @@
 {
-  "name": "donot-redis-cache",
+  "name": "donot-cache-redis",
   "version": "1.0.0",
   "description": "Redis cache engine for donot.",
   "author": "Kristian Trenskow <trenskow@me.com>",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/trenskow/donot-redis-cache"
+    "url": "https://github.com/trenskow/donot-cache-redis"
   },
   "dependencies": {
     "redis": "^0.12.1"

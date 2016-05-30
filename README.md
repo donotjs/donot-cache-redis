@@ -1,7 +1,7 @@
-donot-redis-cache
+donot-cache-redis
 =================
 
-[![Build Status](https://travis-ci.org/trenskow/donot-redis-cache.svg?branch=master)](https://travis-ci.org/trenskow/donot-redis-cache)
+[![Build Status](https://travis-ci.org/trenskow/donot-cache-redis.svg?branch=master)](https://travis-ci.org/trenskow/donot-cache-redis)
 
 Redis cache engine for [donot](https://github.com/trenskow/donot).
 
@@ -20,9 +20,9 @@ a
     var http = require('http');
 
     var donot = require('donot');
-    var redisCache = require('donot-redis-cache');
+    var redisCache = require('donot-cache-redis');
 
-    var server = http.createServer(donot(serveDir, {
+    var server = http.createServer(donot('/', {
         cache: redisCache(6379, '127.0.0.1')
     ));
 
