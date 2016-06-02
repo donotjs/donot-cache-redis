@@ -9,9 +9,9 @@ Redis cache engine for [donot](https://github.com/donotjs/donot).
 
 Usage:
 
-    redisCache()
-    redisCache(port)
-    redisCache(port, host)
+    new RedisCache()
+    new RedisCache(port)
+    new RedisCache(port, host)
 
 `port` defaults to 6379 and host to `127.0.0.1`.
 
@@ -19,15 +19,15 @@ Usage:
 
     var http = require('http'),
         donot = require('donot'),
-        redisCache = require('donot-cache-redis');
+        RedisCache = require('donot-cache-redis');
 
     var server = http.createServer(donot(__dirname + '/public', {
-        cache: redisCache(6379, '127.0.0.1')
+        cache: new RedisCache(6379, '127.0.0.1')
     }));
 
     server.listen(8000);
 
-> Remark. It does not make sense to use caching without template engine plug-ins - as only template renderings are cached. See [donot](https://github.com/donotjs/donot) for available template plug-ins.
+> Remark. It does not make sense to use caching without one or more engine plug-ins - as only engine's output is cached. See [donot](https://github.com/donotjs/donot) for available engine plug-ins.
 
 # License
 
