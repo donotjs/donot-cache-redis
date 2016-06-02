@@ -27,7 +27,7 @@ Usage:
 
     server.listen(8000);
 
-> Remark. It does not make sense to use caching without one or more engine plug-ins - as only engine's output is cached. See [donot](https://github.com/donotjs/donot) for available engine plug-ins.
+> Remark. It does not make sense to use caching without one or more engine plug-ins - as only an engine's output is cached. See [donot](https://github.com/donotjs/donot) for available engine plug-ins.
 
 # License
 
