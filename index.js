@@ -1,35 +1,33 @@
 'use strict';
 
-var redis = require('redis');
+const redis = require('redis');
+const Cache = require('@donotjs/donot-cache');
 
-exports = module.exports = function() {
+class RedisCache extends Cache {
 
-  var client = redis.createClient.apply(this, arguments);
+	constructor() {
+		super();
+		this.client = redis.createClient.call(this, arguments);
+	}
 
-  return {
-    get: function(file, cb) {
-      client.get(file, function(err, json) {
-        var data;
-        try {
-          data = JSON.parse(json);
-        } catch (e) {
-          return cb(e);
-        }
-        cb(null, data);
-      });
-    },
-    set: function(file, data, cb) {
-      var json;
-      try {
-        json = JSON.stringify(data);
-      } catch (err) {
-        return cb(err);
-      }
-      client.set(file, json, function(err) {
-        cb(err);
-      });
-    },
-    client: client
-  };
+	get(filename) {
+		return new Promise((resolved, rejected) => {
+			this.client.get(filename, (err, json) => {
+				if (err) return rejected(err);
+				resolved(JSON.parse(json));
+			});
+		});
+	}
 
-};
+	set(filename, data) {
+		return new Promise((resolved, rejected) => {
+			this.client.set(filename, JSON.stringify(data), function(err) {
+				if (err) return rejected(err);
+				resolved();
+			});
+		});
+	}
+
+}
+
+exports = module.exports = RedisCache;

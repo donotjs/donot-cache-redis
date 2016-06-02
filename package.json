@@ -9,6 +9,7 @@
     "url": "https://github.com/donotjs/donot-cache-redis"
   },
   "dependencies": {
+    "@donotjs/donot-cache": "^1.0.1",
     "redis": "^0.12.1"
   },
   "devDependencies": {
