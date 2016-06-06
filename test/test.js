@@ -16,13 +16,13 @@ const cache = new RedisCache();
 describe('cache', () => {
 
 	it ('should set data without error', () => {
-		return cache.set('test/', { modified: new Date() }).should.eventually.be.fulfilled;
+		return cache.set('test/', { modificationDate: new Date() }).should.eventually.be.fulfilled;
 	});
 
 	it ('get data without error and correct format', () => {
 		return cache.get('test/').then((data) => {
 			expect(data).to.be.an('object');
-			return new Date(data.modified);
+			return new Date(data.modificationDate);
 		}).should.eventually.be.fulfilled;
 	});
 
