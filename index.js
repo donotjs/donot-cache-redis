@@ -17,6 +17,11 @@ class RedisCache extends Cache {
 
 				var result = JSON.parse(json);
 
+				// Convert data to Buffer
+				if (result.data) {
+					result.data = new Buffer(result.data.data);
+				}
+
 				// Convert date string to Date.
 				if (result.modificationDate) {
 					result.modificationDate = new Date(result.modificationDate);
