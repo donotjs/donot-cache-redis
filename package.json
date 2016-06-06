@@ -1,6 +1,6 @@
 {
   "name": "@donotjs/donot-cache-redis",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Redis cache for donot.",
   "author": "Kristian Trenskow <trenskow@me.com>",
   "main": "index.js",

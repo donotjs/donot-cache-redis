@@ -14,16 +14,16 @@ class RedisCache extends Cache {
 		return new Promise((resolved, rejected) => {
 			this.client.get(filename, (err, json) => {
 				if (err) return rejected(err);
-
+				
 				var result = JSON.parse(json);
 
 				// Convert data to Buffer
-				if (result.data) {
+				if (result && result.data) {
 					result.data = new Buffer(result.data.data);
 				}
 
 				// Convert date string to Date.
-				if (result.modificationDate) {
+				if (result && result.modificationDate) {
 					result.modificationDate = new Date(result.modificationDate);
 				}
 
